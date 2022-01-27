@@ -30,7 +30,7 @@ export default function Home() {
               className="MARQUEE text-3xl text-slate-200 font-bold"
               data-speed="0.2"
             >
-              This is a demo made by MAD to showcase types of designs possible
+              This is a demo made by Aditya to showcase types of designs possible
               with gsap
             </h2>
           </div>
