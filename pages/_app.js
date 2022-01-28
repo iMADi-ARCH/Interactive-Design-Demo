@@ -52,7 +52,9 @@ function MyApp({ Component, pageProps }) {
       <nav className="container left-1/2 -translate-x-1/2 z-50 fixed border-b border-slate-800 bg-slate-900 flex justify-between px-10 md:px-20 py-3 items-center">
         <span className="font-black">MAD</span>
         <div className="hidden sm:flex gap-5">
-          <Link href="/">Home</Link>
+          <Link href="/" passHref>
+            <a>Home</a>
+          </Link>
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
           <Link href="/contact">Contact</Link>

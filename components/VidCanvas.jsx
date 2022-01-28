@@ -48,7 +48,7 @@ const VidCanvas = ({
         pin: true,
         start: "top top",
         end: `${end ? end : "bottom"} top`,
-        markers: true,
+        markers: false,
       },
     });
     tl.to(canFrame, {
