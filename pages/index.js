@@ -1,12 +1,11 @@
 import { useEffect, useRef } from "react";
-import useAnimation from "../components/useAnimation";
 import { gsap } from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import VidCanvas from "../components/VidCanvas";
+import { Icon } from "@iconify/react";
 
 export default function Home() {
-  const viewer = useRef();
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
   });
@@ -102,7 +101,6 @@ export default function Home() {
               objectFit="cover"
             />
           </div>
-          <canvas className="absolute -z-10" ref={viewer}></canvas>
           <div className="FADE text-slate-900">
             <h1 className="section-heading">I am a Learner</h1>
             <h2 className="text-2xl font-normal">
@@ -113,6 +111,48 @@ export default function Home() {
               based on 4 factors - Performance, Minimalism, Readability, and
               Beautifulness
             </p>
+          </div>
+        </section>
+        {/*  grid grid-cols-2 justify-items-start items-start p-0 */}
+        <section className="relative h-[300vh] grid grid-cols-1 grid-rows-1">
+          <VidCanvas
+            folderPath="/assets/vids/madintro2"
+            ext="jpg"
+            totalFrames="45"
+            className="absolute inset-0"
+            end="+=200%"
+          />
+          <div className="FADECONTAINER py-10 even:items-end grid grid-cols-1 grid-rows-3 justify-items-center items-center h-full">
+            <div className="section-text FADE flex flex-col justify-center self-center">
+              <h1 className="section-heading">Expert in HTML, CSS and JS </h1>
+              <h2 className="text-2xl font-normal">
+                HTML, CSS and JS Everywhere.
+              </h2>
+              <p className="text-justify font-light leading-relaxed">
+                The skeleton of every damn webpage.
+              </p>
+            </div>
+            <div className="section-text FADE flex flex-col justify-center self-center items-end text-right">
+              <h1 className="section-heading">
+                Intermediate React JS and Next JS Developer
+              </h1>
+              <h2 className="text-2xl font-normal">
+                For performant single page web applications.
+              </h2>
+              <p className="text-justify font-light leading-relaxed">
+                Who doesnt likes SPAs?
+              </p>
+            </div>
+            <div className="section-text FADE flex flex-col justify-center self-center">
+              <h1 className="section-heading">Lorem, ipsum dolor.</h1>
+              <h2 className="text-2xl font-normal">
+                Lorem ipsum dolor sit amet.
+              </h2>
+              <p className="text-justify font-light leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident, quam!
+              </p>
+            </div>
           </div>
         </section>
       </main>

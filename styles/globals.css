@@ -20,22 +20,25 @@ section {
 }
 
 img {
-  @apply w-full h-full object-cover;
+  @apply w-full h-full object-cover rounded;
 }
 
-canvas {
+/* canvas {
   position: absolute;
   top: 50%;
   right: 0%;
   transform: translate(0, -50%) scale(0.6);
+} */
+canvas {
+  @apply w-full h-screen overflow-hidden object-cover -z-10;
 }
 
 .section-heading {
-  @apply z-10 text-4xl sm:text-5xl md:text-6xl font-black;
+  @apply z-10 text-4xl sm:text-5xl md:text-6xl font-black drop-shadow-lg;
 }
 .section-gallery {
   @apply absolute max-w-[35rem] right-0 lg:static grid grid-cols-2 h-full w-full py-10 -z-50;
 }
 .section-text {
-  @apply lg:bg-transparent bg-slate-800/80 backdrop-blur-xl w-fit p-10 lg:w-full lg:p-0;
+  @apply lg:bg-transparent bg-slate-800/90 rounded w-fit p-10 lg:w-full lg:p-0;
 }
