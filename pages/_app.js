@@ -1,32 +1,11 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import Link from "next/link";
-import { useEffect } from "react";
-import { gsap } from "gsap/dist/gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Footer from "../components/Footer";
 import useAnimation from "../components/useAnimation";
+import Nav from "../components/Nav";
 
 function MyApp({ Component, pageProps }) {
   useAnimation();
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const showAnim = gsap
-      .from("nav", {
-        yPercent: -100,
-        paused: true,
-        duration: 0.2,
-      })
-      .progress(1);
-
-    ScrollTrigger.create({
-      start: "top top",
-      end: 99999,
-      onUpdate: (self) => {
-        self.direction === -1 ? showAnim.play() : showAnim.reverse();
-      },
-    });
-  });
 
   return (
     <div className="relative z-0 bg-slate-900 overflow-hidden ">
@@ -49,22 +28,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
 
-      <nav className="container left-1/2 -translate-x-1/2 z-50 fixed border-b border-slate-800 bg-slate-900 flex justify-between px-10 md:px-20 py-3 items-center">
-        <span className="font-black">MAD</span>
-        <div className="hidden sm:flex gap-5">
-          <Link href="/" passHref>
-            <a>Home</a>
-          </Link>
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
-        <Link href="/">
-          <button className="px-5 py-2 bg-slate-50 rounded-lg text-slate-900">
-            Say Hello
-          </button>
-        </Link>
-      </nav>
+      <Nav />
       <div className="container mx-auto">
         <Component {...pageProps} />
       </div>

@@ -4,6 +4,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import VidCanvas from "../components/VidCanvas";
 import { Icon } from "@iconify/react";
+import { SkillCard } from "../components/Cards";
 
 export default function Home() {
   useEffect(() => {
@@ -93,13 +94,13 @@ export default function Home() {
         </section>
         <section className="PARALLAXCONTAINER overflow-hidden FADECONTAINER">
           <div className="PARALLAXBG">
-            {/* <img src="/assets/pics/windows.jpg" /> */}
-            <Image
+            <img src="/assets/pics/windows.jpg" />
+            {/* <Image
               src="/assets/pics/windows.jpg"
               alt="abstract image"
               layout="fill"
               objectFit="cover"
-            />
+            /> */}
           </div>
           <div className="FADE text-slate-900">
             <h1 className="section-heading">I am a Learner</h1>
@@ -114,14 +115,64 @@ export default function Home() {
           </div>
         </section>
         {/*  grid grid-cols-2 justify-items-start items-start p-0 */}
+
+        <section className="flex-col justify-center">
+          <h1 className="section-heading">My Skills</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-5 justify-items-center">
+            <SkillCard
+              title="HTML"
+              githubHref="https://github.com/iMADi-ARCH?tab=repositories&q=&type=&language=html&sort="
+              iconifyText="vscode-icons:file-type-html"
+            >
+              The skeleton of every web application. No web app can stand
+              without HTML.
+            </SkillCard>
+
+            <SkillCard
+              title="CSS"
+              githubHref="https://github.com/iMADi-ARCH?tab=repositories&q=&type=&language=css&sort="
+              iconifyText="vscode-icons:file-type-css"
+            >
+              The Muscles of every web application. No web app can be called
+              beautiful without CSS.
+            </SkillCard>
+
+            <SkillCard
+              title="JavaScript"
+              githubHref="https://github.com/iMADi-ARCH?tab=repositories&q=&type=&language=javascript&sort="
+              iconifyText="vscode-icons:file-type-js-official"
+            >
+              The Brain of every web application. No website can compete with
+              one having JS.
+            </SkillCard>
+
+            <SkillCard
+              title="React JS"
+              githubHref="https://github.com/iMADi-ARCH?tab=repositories&q=&type=&language=javascript&sort="
+              iconifyText="vscode-icons:file-type-reactjs"
+            >
+              Modern frontend framework for making awesome dynamic apps.
+            </SkillCard>
+
+            <SkillCard
+              title="Next JS"
+              githubHref="https://github.com/iMADi-ARCH?tab=repositories&q=&type=&language=javascript&sort="
+              iconifyText="cib:next-js"
+            >
+              Frontend framework based on React JS with more useful features for
+              even more awesome dynamic apps.
+            </SkillCard>
+          </div>
+        </section>
+
         <section className="relative h-[300vh] grid grid-cols-1 grid-rows-1">
-          <VidCanvas
+          {/* <VidCanvas
             folderPath="/assets/vids/madintro2"
             ext="jpg"
             totalFrames="45"
             className="absolute inset-0"
             end="+=200%"
-          />
+          /> */}
           <div className="FADECONTAINER py-10 even:items-end grid grid-cols-1 grid-rows-3 justify-items-center items-center h-full">
             <div className="section-text FADE flex flex-col justify-center self-center">
               <h1 className="section-heading">Expert in HTML, CSS and JS </h1>

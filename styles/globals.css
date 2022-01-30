@@ -7,7 +7,7 @@ body {
 }
 
 section {
-  @apply h-screen max-h-[2160px] px-10 md:px-20 py-5 flex justify-between items-center;
+  @apply min-h-screen max-h-[2160px] px-10 md:px-20 py-5 flex justify-between items-center;
 }
 
 .PARALLAXBG,
