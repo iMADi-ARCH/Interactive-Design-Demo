@@ -26,6 +26,7 @@ const SkillCard = ({ title, iconifyText, githubHref, className, children }) => {
       <a
         href={githubHref}
         target="_blank"
+        rel="noreferrer noopener"
         className="group flex cursor-pointer justify-start overflow-visible hover:gap-3 items-center p-3 m-2 bg-slate-300 text-slate-900 rounded-full self-end justify-self-end place-self-end"
       >
         <Icon icon="akar-icons:github-fill" width="2rem" />
