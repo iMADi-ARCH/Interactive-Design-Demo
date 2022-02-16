@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useRouter } from "next/router";
 
 const useAnimation = () => {
+  const router = useRouter();
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.matchMedia({
@@ -20,7 +22,7 @@ const useAnimation = () => {
         marquee();
       },
     });
-  }, []);
+  }, [router.asPath]);
   return null;
 };
 

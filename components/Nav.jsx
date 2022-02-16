@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Button from "./Button";
 
 const Nav = () => {
   useEffect(() => {
@@ -40,9 +41,9 @@ const Nav = () => {
         </Link>
       </div>
       <Link href="/">
-        <button className="px-5 py-2 bg-slate-50 rounded-lg text-slate-900">
-          Say Hello
-        </button>
+        <a>
+          <Button>Say Hello</Button>
+        </a>
       </Link>
     </nav>
   );

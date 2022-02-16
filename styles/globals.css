@@ -7,7 +7,7 @@ body {
 }
 
 section {
-  @apply min-h-screen max-h-[2160px] px-10 md:px-20 py-5 flex justify-between items-center;
+  @apply min-h-screen max-h-[2160px] px-10 md:px-20 py-20 flex justify-between items-center;
 }
 
 .PARALLAXBG,
@@ -29,6 +29,7 @@ img {
   right: 0%;
   transform: translate(0, -50%) scale(0.6);
 } */
+
 canvas {
   @apply w-full h-screen overflow-hidden object-cover -z-10;
 }
@@ -41,4 +42,9 @@ canvas {
 }
 .section-text {
   @apply lg:bg-transparent bg-slate-800/90 rounded w-fit p-10 lg:w-full lg:p-0;
+}
+
+.section-grid {
+  /* @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-5 justify-items-center; */
+  @apply flex flex-wrap gap-5 justify-center;
 }
